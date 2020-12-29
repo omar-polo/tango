@@ -1,0 +1,15 @@
+# Hello world
+
+Here’s different examples of “hello world” programs in different programming languages
+
+```elisp
+(message "Hello, world!")
+```
+
+```c
+printf("Hello, world!");
+```
+
+```common-lisp
+(format t "Hello, world!")
+```

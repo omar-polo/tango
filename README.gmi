@@ -1,0 +1,30 @@
+# tango
+
+> tangle gemini files
+
+tango is an utility to tangle literate programs written in text/gemini files.  It’s able to export bocks all blocks of preformatted text, or only a subset of them matching a regular expression, and export them.
+
+### Usage
+
+```
+tango [-r regex] [-o out] [file]
+```
+
+tango will extract all the code blocks from file (standard input if not specified) to out (standard output if not specified), optionally limiting the blocks to those who match the provided regular expression.
+
+You’ll find a test.gmi file that distributed with the sources.  It’s a silly text/gemini file with different example of “Hello World” in different programming languages (elisp, c, common-lisp).  You can export the common-lisp with
+```sh
+tango -r common-lisp test.gmi
+```
+
+To export the C code you may run
+```sh
+tango -r c test.gmi
+```
+but ‘c’ matches both C and common-lisp, so you have to run
+```sh
+tango -r 'c$' test.gmi
+```
+instead.
+
+See the manpage for further details.
