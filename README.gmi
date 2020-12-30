@@ -7,7 +7,7 @@ tango is an utility to tangle literate programs written in text/gemini files.  I
 ### Usage
 
 ```
-tango [-r regex] [-o out] [file]
+tango [-r regex] [-o out] [files…]
 ```
 
 tango will extract all the code blocks from file (standard input if not specified) to out (standard output if not specified), optionally limiting the blocks to those who match the provided regular expression.
